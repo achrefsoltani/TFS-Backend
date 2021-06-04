@@ -29,5 +29,13 @@ export class CreditService {
     async delete(id): Promise<DeleteResult> {
         return await this.creditRepository.delete(id);
     }
+
+    async  readbyraison(raison : string): Promise<Credit[]> {
+        return await this.creditRepository.find({
+            where: {
+                type : raison
+            }
+        });
+    }
     
 }

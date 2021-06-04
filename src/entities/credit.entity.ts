@@ -20,5 +20,5 @@ export class Credit {
   lien: string;
 
   @Column()
-  image: string;
+  description: string;
 }
