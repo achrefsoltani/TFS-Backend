@@ -5,6 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CreditService } from './credit/credit.service';
+import { CreditsController } from './credits/credits.controller';
 
 
 @Module({
@@ -19,7 +21,7 @@ import { AppService } from './app.service';
     }),
     TypeOrmModule.forFeature([Credit]),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, CreditsController],
+  providers: [AppService, CreditService],
 })
 export class AppModule {}
