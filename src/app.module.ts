@@ -7,6 +7,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CreditService } from './credit/credit.service';
 import { CreditsController } from './credits/credits.controller';
+import { CalculCreditController } from './calcul-credit/calcul-credit.controller';
 
 
 @Module({
@@ -21,7 +22,7 @@ import { CreditsController } from './credits/credits.controller';
     }),
     TypeOrmModule.forFeature([Credit]),
   ],
-  controllers: [AppController, CreditsController],
+  controllers: [AppController, CreditsController, CalculCreditController],
   providers: [AppService, CreditService],
 })
 export class AppModule {}
