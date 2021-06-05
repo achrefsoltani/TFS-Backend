@@ -16,5 +16,12 @@ export class AppService {
 
   }
 
-  
+  calculEpargne(Is: string, Ps : string, ns : string, rs : string){
+    let I = parseFloat(Is);
+    let P = parseFloat(Ps);
+    let n = parseFloat(ns);
+    let r = parseFloat(rs)/100/12;
+    let finalAmount = I*((1+r)**n)+(P*(((1+r)**n)-1))/r ;
+    return finalAmount;
+  }
 }
