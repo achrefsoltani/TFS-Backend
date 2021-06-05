@@ -12,6 +12,7 @@ import { CalculCreditController } from './calcul-credit/calcul-credit.controller
 import { ListCreditController } from './list-credit/list-credit.controller';
 import { EpargneService } from './epargne/epargne.service';
 import { EpargnesController } from './epargnes/epargnes.controller';
+import { NetController } from './net/net.controller';
 
 
 @Module({
@@ -26,7 +27,7 @@ import { EpargnesController } from './epargnes/epargnes.controller';
     }),
     TypeOrmModule.forFeature([Credit,Epargne]),
   ],
-  controllers: [AppController, CreditsController, CalculCreditController, ListCreditController, EpargnesController],
+  controllers: [AppController, CreditsController, CalculCreditController, ListCreditController, EpargnesController, NetController],
   providers: [AppService, CreditService, EpargneService],
 })
 export class AppModule {}
