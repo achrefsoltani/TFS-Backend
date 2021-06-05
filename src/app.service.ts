@@ -41,4 +41,11 @@ export class AppService {
     return {"net": (ba - impot - cnss)/12,"impot":impot/12, "cnss": cnss/12};
     
   }
+
+  calculBudget(Budget : string){
+    let b = parseFloat(Budget);
+
+    return {"Logement": (b/100)*35, "Factures": (b/100)*10, "Alimentation et autres achats": (b/100)*35, "Loisir": (b/100)*10, "Epargne":(b/100)*10}
+
+  }
 }
